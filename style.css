@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  color: #ccc; 
+}
+
+
+
+.grid {
+  width: 340px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+  flex-wrap: wrap;
+}
+
+.card {
+    width: 100px;
+    height: 105px;
+    position: relative;
+    transition: transform 1s;
+    display: block;
+    transform-style: preserve-3d;
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+    border: solid black;
+  }
+
+  .card img {
+    max-width: 98%;
+    max-height: 98%;
+  }
+  .front-face,
+  .back-face{
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; bottom: 0; /* Задаём так высоту */
+    backface-visibility: hidden;
+  }
+
+  .back-face{
+    transform: rotateY(180deg);
+  }
+
+  .card.opened {
+    background-color: #fff;
+    transform: rotateY(180deg);
+  }
+
+  .modal {
+    display: none; /* По умолчанию окно закрыто */
+    z-index: 10; /* Чтобы сделать окно поверх всех элементов */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный темный фон */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .modal--open {
+    display: flex; 
+  }
+  
+  .modal__box {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .modal__title {
+    color: #111;
+    font-size: 32px;
+    text-align: center;
+    text-decoration: solid;
+    margin-bottom: 20px;
+  }
+  
+  .modal__info {
+    color: #111;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .modal__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    box-sizing: border-box;
+    display: flex;
+    width: max-content;
+    background-color: #0066cc;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+
+  

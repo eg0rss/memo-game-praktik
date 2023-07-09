@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Угадай пару</title>
+</head>
+<body>
+    <div class="grid">
+        <div class="card" data-fruit="orange">
+            <img src="question.png" class ="front-face"/>
+            <img src="image1.png" alt="" class = "back-face" />
+        </div>
+        <div class="card" data-fruit="cherry">
+            <img src="question.png" class ="front-face"/>
+            <img src="image2.png" alt="" class = "back-face" />
+        </div>
+        <div class="card" data-fruit="apple">
+            <img src="question.png" class ="front-face"/>
+            <img src="image3.png" alt="" class = "back-face" />
+        </div>
+        <div class="card" data-fruit="orange">
+            <img src="question.png" class ="front-face"/>
+            <img src="image1.png" alt="" class = "back-face" />
+        </div>
+        <div class="card" data-fruit="cherry">
+            <img src="question.png" class ="front-face"/>
+            <img src="image2.png" alt="" class = "back-face" />
+        </div>
+        <div class="card" data-fruit="apple">
+            <img src="question.png" class ="front-face"/>
+            <img src="image3.png" alt="" class = "back-face" />
+        </div>
+      </div>
+      <div class="modal" id="modal">
+        <div class="modal__box">
+          <div class="modal__title">Победа</div>
+          <div class="modal__info">
+            <p>Хотите сыграть еще?</p>
+          </div>
+          <div class="modal__bottom">
+            <button class="btn" onclick="location.reload();">Да</a>
+          </div>
+        </div>
+      </div>
+    <script src="game.js"></script>
+</body>
+</html>
